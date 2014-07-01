@@ -1,0 +1,7 @@
+C:\Users\jaskew\Documents\PluginManager\Plugin2\bin\Debug\Plugin2.dll
+C:\Users\jaskew\Documents\PluginManager\Plugin2\bin\Debug\Plugin2.pdb
+C:\Users\jaskew\Documents\PluginManager\Plugin2\obj\Debug\Plugin2.csprojResolveAssemblyReference.cache
+C:\Users\jaskew\Documents\PluginManager\Plugin2\obj\Debug\Plugin2.dll
+C:\Users\jaskew\Documents\PluginManager\Plugin2\obj\Debug\Plugin2.pdb
+C:\Users\jaskew\Documents\PluginManager\Plugin2\bin\Debug\PluginInterfaces.dll
+C:\Users\jaskew\Documents\PluginManager\Plugin2\bin\Debug\PluginInterfaces.pdb

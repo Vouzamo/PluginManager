@@ -1,0 +1,10 @@
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginConsole.exe.config
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginConsole.exe
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginConsole.pdb
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginInterfaces.dll
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginManager.dll
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginInterfaces.pdb
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginManager.pdb
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\obj\Debug\PluginConsole.csprojResolveAssemblyReference.cache
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\obj\Debug\PluginConsole.exe
+C:\Users\jaskew\Documents\PluginManager\PluginConsole\obj\Debug\PluginConsole.pdb

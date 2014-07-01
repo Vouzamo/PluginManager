@@ -1,0 +1,9 @@
+C:\Users\jaskew\Documents\PluginManager\PluginTest\obj\Debug\PluginTest.csprojResolveAssemblyReference.cache
+C:\Users\jaskew\Documents\PluginManager\PluginTest\bin\Debug\PluginTest.dll
+C:\Users\jaskew\Documents\PluginManager\PluginTest\bin\Debug\PluginTest.pdb
+C:\Users\jaskew\Documents\PluginManager\PluginTest\bin\Debug\PluginManager.dll
+C:\Users\jaskew\Documents\PluginManager\PluginTest\bin\Debug\PluginManager.pdb
+C:\Users\jaskew\Documents\PluginManager\PluginTest\obj\Debug\PluginTest.dll
+C:\Users\jaskew\Documents\PluginManager\PluginTest\obj\Debug\PluginTest.pdb
+C:\Users\jaskew\Documents\PluginManager\PluginTest\bin\Debug\PluginInterfaces.dll
+C:\Users\jaskew\Documents\PluginManager\PluginTest\bin\Debug\PluginInterfaces.pdb
