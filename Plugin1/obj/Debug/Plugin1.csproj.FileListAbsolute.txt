@@ -5,3 +5,10 @@ C:\Users\jaskew\Documents\PluginManager\Plugin1\obj\Debug\Plugin1.dll
 C:\Users\jaskew\Documents\PluginManager\Plugin1\obj\Debug\Plugin1.pdb
 C:\Users\jaskew\Documents\PluginManager\Plugin1\bin\Debug\PluginInterfaces.dll
 C:\Users\jaskew\Documents\PluginManager\Plugin1\bin\Debug\PluginInterfaces.pdb
+C:\Projects\Git\PluginManager\Plugin1\bin\Debug\Plugin1.dll
+C:\Projects\Git\PluginManager\Plugin1\bin\Debug\Plugin1.pdb
+C:\Projects\Git\PluginManager\Plugin1\bin\Debug\PluginInterfaces.dll
+C:\Projects\Git\PluginManager\Plugin1\bin\Debug\PluginInterfaces.pdb
+C:\Projects\Git\PluginManager\Plugin1\obj\Debug\Plugin1.csprojResolveAssemblyReference.cache
+C:\Projects\Git\PluginManager\Plugin1\obj\Debug\Plugin1.dll
+C:\Projects\Git\PluginManager\Plugin1\obj\Debug\Plugin1.pdb

@@ -16,20 +16,26 @@ namespace PluginConsole
 
             PluginController pluginController = new PluginController(pluginDirectory);
 
-            Console.WriteLine(pluginController.Plugins.Count + " plugins loaded!");
+            Console.WriteLine(pluginController.Plugins.Count() + " plugins loaded!");
             Console.WriteLine();
             Console.Write("Press any key to begin: ");
             Console.ReadKey();
             Console.WriteLine();
             Console.WriteLine();
 
-            foreach (KeyValuePair<IPluginDescriptor, IPlugin> plugin in pluginController.Plugins)
+            foreach (IBasicPlugin basicPlugin in pluginController.GetPlugins<IBasicPlugin>())
             {
-                Console.WriteLine("------ " + plugin.Key.Name + " ------");
+                basicPlugin.DoSomethingBasic();
+            }
 
-                pluginController.Execute(plugin.Key, plugin.Value);
+            foreach (IPlugin plugin in pluginController.GetPlugins<IPlugin>())
+            {
+                pluginController.Execute(plugin);
+            }
 
-                Console.WriteLine();
+            foreach (string message in pluginController.GetAllMessages())
+            {
+                Console.WriteLine(message);
             }
 
             Console.Write("Press any key to exit: ");

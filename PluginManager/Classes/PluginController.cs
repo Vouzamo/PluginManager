@@ -1,78 +1,72 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition.Hosting;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Xml;
-using System.Xml.Linq;
 using PluginInterfaces;
+using System.ComponentModel.Composition;
 
 namespace PluginManager.Classes
 {
     public class PluginController
     {
         public IPluginMaster Master { get; set; }
-        public Dictionary<IPluginDescriptor, IPlugin> Plugins { get; set; }  
+        
+        [ImportMany(typeof(IPlugin))]
+        public IEnumerable<IPlugin> Plugins { get; set; }  
 
         public PluginController(string pluginDirectory)
         {
             Master = new PluginMaster();
-            Plugins = RegisterPlugins(pluginDirectory);
+            RegisterPlugins(pluginDirectory);
         }
 
-        private Dictionary<IPluginDescriptor, IPlugin> RegisterPlugins(string pluginDirectory)
+        private void RegisterPlugins(string pluginDirectory)
         {
-            Dictionary<IPluginDescriptor, IPlugin> plugins = new Dictionary<IPluginDescriptor, IPlugin>();
-
             try
             {
-                DirectoryInfo directory = new DirectoryInfo(pluginDirectory);
+                var aggregateCatalog = new AggregateCatalog();
 
-                FileInfo[] assemblies = directory.GetFiles("*.dll");
-                foreach (FileInfo fileInfo in assemblies)
+                var assemblyCatalog = new AssemblyCatalog(Assembly.GetExecutingAssembly());
+                var directoryCatalog = new DirectoryCatalog(pluginDirectory);
+
+                aggregateCatalog.Catalogs.Add(assemblyCatalog);
+                aggregateCatalog.Catalogs.Add(directoryCatalog);
+
+                //var container = new CompositionContainer(aggregateCatalog);
+                var container = new CompositionContainer(directoryCatalog);
+                container.ComposeParts(this);
+
+                foreach (IPlugin plugin in Plugins)
                 {
-                    Assembly assembly = Assembly.LoadFile(fileInfo.FullName);
-                    Type[] types = assembly.GetTypes();
-
-                    foreach (Type t in types)
-                    {
-                        Type[] interfaces = t.GetInterfaces();
-
-                        foreach (Type i in interfaces)
-                        {
-                            if (i == typeof(IPlugin))
-                            {
-                                IPlugin plugin = Activator.CreateInstance(t) as IPlugin;
-
-                                if (plugin != null)
-                                {
-                                    FileInfo[] descriptorXml = fileInfo.Directory.GetFiles(Path.GetFileNameWithoutExtension(fileInfo.Name) + ".xml");
-                                    XDocument doc = XDocument.Load(descriptorXml.First().FullName);
-
-                                    string name = doc.Descendants().First(x => x.Name == "PluginName").Value;
-                                    IPluginDescriptor descriptor = new PluginDescriptor(name);
-
-                                    plugins.Add(descriptor, plugin);
-                                }
-                            }
-                        }
-                    }
+                    plugin.Master = Master;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
 
-            return plugins;
+        public IEnumerable<T> GetPlugins<T>()
+        {
+            return Plugins.OfType<T>().ToList();
         }
 
         public void StartAll()
         {
-            foreach (KeyValuePair<IPluginDescriptor, IPlugin> plugin in Plugins)
+            foreach (IPlugin plugin in Plugins)
             {
-                Execute(plugin.Key, plugin.Value);
+                if (plugin is IBasicPlugin)
+                {
+                    IBasicPlugin basicPlugin = plugin as IBasicPlugin;
+                    basicPlugin.DoSomethingBasic();
+                }
+                else
+                {
+                    Execute(plugin);
+                }
             }
         }
 
@@ -80,43 +74,40 @@ namespace PluginManager.Classes
         {
             Queue<string> messages = new Queue<string>();
 
-            foreach (KeyValuePair<IPluginDescriptor, IPlugin> plugin in Plugins)
+            foreach (IPlugin plugin in Plugins)
             {
-                foreach (string message in GetMessages(plugin.Key))
-                {
-                    messages.Enqueue(message);
-                }
+                messages.Enqueue(plugin.Name + "[" + plugin.MajorVersion + "." + plugin.MinorVersion + "]");
+            }
+
+            foreach (string message in Master.Messages)
+            {
+                messages.Enqueue(message);
             }
 
             return messages;
         }
 
-        public void Execute(IPluginDescriptor descriptor, IPlugin plugin)
+        public void Execute(IPlugin plugin)
         {
             Stopwatch stopWatch = new Stopwatch();
 
             stopWatch.Reset();
             stopWatch.Start();
-            plugin.Before(descriptor, Master);
+            plugin.Before();
             stopWatch.Stop();
             Console.WriteLine("Before took: " + stopWatch.ElapsedTicks + " ticks");
 
             stopWatch.Reset();
             stopWatch.Start();
-            plugin.Main(descriptor, Master);
+            plugin.Main();
             stopWatch.Stop();
             Console.WriteLine("Main took: " + stopWatch.ElapsedTicks + " ticks");
 
             stopWatch.Reset();
             stopWatch.Start();
-            plugin.After(descriptor, Master);
+            plugin.After();
             stopWatch.Stop();
             Console.WriteLine("After took: " + stopWatch.ElapsedTicks + " ticks");
-        }
-
-        public Queue<string> GetMessages(IPluginDescriptor descriptor)
-        {
-            return descriptor.Messages;
         }
     }
 }

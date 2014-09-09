@@ -1,23 +1,37 @@
-﻿using System.Threading;
+﻿using System.ComponentModel.Composition;
+using System.Threading;
 using PluginInterfaces;
 
 namespace Plugin1
 {
+    [Export(typeof(IPlugin))]
     public class Plugin1 : IPlugin
     {
-        public void Before(IPluginDescriptor descriptor, IPluginMaster master)
+        public IPluginMaster Master { get; set; }
+        public string Name { get; set; }
+        public int MajorVersion { get; set; }
+        public int MinorVersion { get; set; }
+
+        public Plugin1()
         {
-            descriptor.Messages.Enqueue(descriptor.Name + " Before");
+            Name = "Plugin 1";
+            MajorVersion = 0;
+            MinorVersion = 1;
         }
 
-        public void Main(IPluginDescriptor descriptor, IPluginMaster master)
+        public void Before()
+        {
+            Master.Messages.Enqueue(Name + " Before");
+        }
+
+        public void Main()
         {
             Thread.Sleep(1000);
         }
 
-        public void After(IPluginDescriptor descriptor, IPluginMaster master)
+        public void After()
         {
-            descriptor.Messages.Enqueue(descriptor.Name + " After");
+            Master.Messages.Enqueue(Name + " After");
         }
     }
 }

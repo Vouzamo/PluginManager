@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBasicPlugin.cs" />
     <Compile Include="IPlugin.cs" />
-    <Compile Include="IPluginDescriptor.cs" />
     <Compile Include="IPluginMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

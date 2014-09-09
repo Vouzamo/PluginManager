@@ -3,3 +3,8 @@ C:\Users\jaskew\Documents\PluginManager\PluginInterfaces\bin\Debug\PluginInterfa
 C:\Users\jaskew\Documents\PluginManager\PluginInterfaces\obj\Debug\PluginInterfaces.dll
 C:\Users\jaskew\Documents\PluginManager\PluginInterfaces\obj\Debug\PluginInterfaces.pdb
 C:\Users\jaskew\Documents\PluginManager\PluginInterfaces\obj\Debug\PluginInterfaces.csprojResolveAssemblyReference.cache
+C:\Projects\Git\PluginManager\PluginInterfaces\bin\Debug\PluginInterfaces.dll
+C:\Projects\Git\PluginManager\PluginInterfaces\bin\Debug\PluginInterfaces.pdb
+C:\Projects\Git\PluginManager\PluginInterfaces\obj\Debug\PluginInterfaces.csprojResolveAssemblyReference.cache
+C:\Projects\Git\PluginManager\PluginInterfaces\obj\Debug\PluginInterfaces.dll
+C:\Projects\Git\PluginManager\PluginInterfaces\obj\Debug\PluginInterfaces.pdb

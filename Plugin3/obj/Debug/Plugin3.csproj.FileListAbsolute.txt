@@ -1,0 +1,7 @@
+C:\Projects\Git\PluginManager\Plugin3\obj\Debug\Plugin3.csprojResolveAssemblyReference.cache
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\Plugin3.dll
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\Plugin3.pdb
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\PluginInterfaces.dll
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\PluginInterfaces.pdb
+C:\Projects\Git\PluginManager\Plugin3\obj\Debug\Plugin3.dll
+C:\Projects\Git\PluginManager\Plugin3\obj\Debug\Plugin3.pdb

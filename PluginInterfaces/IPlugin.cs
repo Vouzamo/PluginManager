@@ -2,8 +2,13 @@
 {
     public interface IPlugin
     {
-        void Before(IPluginDescriptor descriptor, IPluginMaster master);
-        void Main(IPluginDescriptor descriptor, IPluginMaster master);
-        void After(IPluginDescriptor descriptor, IPluginMaster master);
+        IPluginMaster Master { get; set; }
+        string Name { get; set; }
+        int MajorVersion { get; set; }
+        int MinorVersion { get; set; }
+
+        void Before();
+        void Main();
+        void After();
     }
 }

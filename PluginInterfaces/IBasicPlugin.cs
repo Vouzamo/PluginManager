@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PluginInterfaces
 {
-    public interface IPluginDescriptor
+    public interface IBasicPlugin : IPlugin
     {
-        string Name { get; set; }
-        Queue<string> Messages { get; set; } 
+        void DoSomethingBasic();
     }
 }

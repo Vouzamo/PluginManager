@@ -8,3 +8,13 @@ C:\Users\jaskew\Documents\PluginManager\PluginConsole\bin\Debug\PluginManager.pd
 C:\Users\jaskew\Documents\PluginManager\PluginConsole\obj\Debug\PluginConsole.csprojResolveAssemblyReference.cache
 C:\Users\jaskew\Documents\PluginManager\PluginConsole\obj\Debug\PluginConsole.exe
 C:\Users\jaskew\Documents\PluginManager\PluginConsole\obj\Debug\PluginConsole.pdb
+C:\Projects\Git\PluginManager\PluginConsole\bin\Debug\PluginConsole.exe.config
+C:\Projects\Git\PluginManager\PluginConsole\obj\Debug\PluginConsole.exe
+C:\Projects\Git\PluginManager\PluginConsole\obj\Debug\PluginConsole.pdb
+C:\Projects\Git\PluginManager\PluginConsole\obj\Debug\PluginConsole.csprojResolveAssemblyReference.cache
+C:\Projects\Git\PluginManager\PluginConsole\bin\Debug\PluginConsole.exe
+C:\Projects\Git\PluginManager\PluginConsole\bin\Debug\PluginConsole.pdb
+C:\Projects\Git\PluginManager\PluginConsole\bin\Debug\PluginInterfaces.dll
+C:\Projects\Git\PluginManager\PluginConsole\bin\Debug\PluginManager.dll
+C:\Projects\Git\PluginManager\PluginConsole\bin\Debug\PluginInterfaces.pdb
+C:\Projects\Git\PluginManager\PluginConsole\bin\Debug\PluginManager.pdb
