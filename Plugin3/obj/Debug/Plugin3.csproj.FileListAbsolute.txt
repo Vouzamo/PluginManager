@@ -5,3 +5,13 @@ C:\Projects\Git\PluginManager\Plugin3\bin\Debug\PluginInterfaces.dll
 C:\Projects\Git\PluginManager\Plugin3\bin\Debug\PluginInterfaces.pdb
 C:\Projects\Git\PluginManager\Plugin3\obj\Debug\Plugin3.dll
 C:\Projects\Git\PluginManager\Plugin3\obj\Debug\Plugin3.pdb
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.AttributedModel.dll
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.Convention.dll
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.Hosting.dll
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.Runtime.dll
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.TypedParts.dll
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.AttributedModel.xml
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.Convention.xml
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.Hosting.xml
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.Runtime.xml
+C:\Projects\Git\PluginManager\Plugin3\bin\Debug\System.Composition.TypedParts.xml

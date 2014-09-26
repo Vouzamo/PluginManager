@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition.Hosting;
+using System.Composition;
+using System.Composition.Hosting;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using PluginInterfaces;
-using System.ComponentModel.Composition;
 
 namespace PluginManager.Classes
 {
@@ -13,7 +14,7 @@ namespace PluginManager.Classes
     {
         public IPluginMaster Master { get; set; }
         
-        [ImportMany(typeof(IPlugin))]
+        [ImportMany]
         public IEnumerable<IPlugin> Plugins { get; set; }  
 
         public PluginController(string pluginDirectory)
@@ -26,17 +27,9 @@ namespace PluginManager.Classes
         {
             try
             {
-                var aggregateCatalog = new AggregateCatalog();
-
-                var assemblyCatalog = new AssemblyCatalog(Assembly.GetExecutingAssembly());
-                var directoryCatalog = new DirectoryCatalog(pluginDirectory);
-
-                aggregateCatalog.Catalogs.Add(assemblyCatalog);
-                aggregateCatalog.Catalogs.Add(directoryCatalog);
-
-                //var container = new CompositionContainer(aggregateCatalog);
-                var container = new CompositionContainer(directoryCatalog);
-                container.ComposeParts(this);
+                var configuration = new ContainerConfiguration().WithAssemblies(LoadAssemblies(pluginDirectory));
+                var compositionHost = configuration.CreateContainer();
+                compositionHost.SatisfyImports(this);
 
                 foreach (IPlugin plugin in Plugins)
                 {
@@ -47,6 +40,21 @@ namespace PluginManager.Classes
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private IEnumerable<Assembly> LoadAssemblies(string pluginDirectory)
+        {
+            List<Assembly> assemblies = new List<Assembly>();
+
+            DirectoryInfo directory = new DirectoryInfo(pluginDirectory);
+            FileInfo[] files = directory.GetFiles("*.dll");
+            foreach (FileInfo file in files)
+            {
+                Assembly assembly = Assembly.LoadFile(file.FullName);
+                assemblies.Add(assembly);
+            }
+
+            return assemblies;
         }
 
         public IEnumerable<T> GetPlugins<T>()

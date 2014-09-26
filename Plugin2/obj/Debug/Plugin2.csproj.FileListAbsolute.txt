@@ -12,3 +12,13 @@ C:\Projects\Git\PluginManager\Plugin2\bin\Debug\PluginInterfaces.pdb
 C:\Projects\Git\PluginManager\Plugin2\obj\Debug\Plugin2.csprojResolveAssemblyReference.cache
 C:\Projects\Git\PluginManager\Plugin2\obj\Debug\Plugin2.dll
 C:\Projects\Git\PluginManager\Plugin2\obj\Debug\Plugin2.pdb
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.AttributedModel.dll
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.Convention.dll
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.Hosting.dll
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.Runtime.dll
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.TypedParts.dll
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.AttributedModel.xml
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.Convention.xml
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.Hosting.xml
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.Runtime.xml
+C:\Projects\Git\PluginManager\Plugin2\bin\Debug\System.Composition.TypedParts.xml

@@ -16,3 +16,11 @@ C:\Projects\Git\PluginManager\PluginTest\bin\Debug\PluginManager.pdb
 C:\Projects\Git\PluginManager\PluginTest\obj\Debug\PluginTest.csprojResolveAssemblyReference.cache
 C:\Projects\Git\PluginManager\PluginTest\obj\Debug\PluginTest.dll
 C:\Projects\Git\PluginManager\PluginTest\obj\Debug\PluginTest.pdb
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.TypedParts.dll
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.Hosting.dll
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.Runtime.dll
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.AttributedModel.dll
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.TypedParts.xml
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.Hosting.xml
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.Runtime.xml
+C:\Projects\Git\PluginManager\PluginTest\bin\Debug\System.Composition.AttributedModel.xml
